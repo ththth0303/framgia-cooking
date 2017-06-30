@@ -12,5 +12,16 @@
 */
 
 Route::get('/', function () {
+    return view('admin.user');
+});
+Route::get('/admin/unit', function () {
+    return view('admin.unit');
+});
+Route::resource('user', 'UserController');
+Route::resource('unit', 'UnitController');
+
+Route::get('/test', function () {
     return view('index');
 });
+
+Route::get('/re', 'UserController@index');
